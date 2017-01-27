@@ -2,8 +2,27 @@
 <head>
 	<title>Mars Rover Kata!</title>
 	<script type="text/javascript" src="rover.js"></script>
+	<link rel="stylesheet" href="main.css">
+
 </head>
 <body>
+
+
+	<h1>Control the Rover</h1>
+	<img src="img/rover.jpg" alt="rover" width="300px">
+	<h3>Rover Position</h3>
+	<p id="rover-position">[0, 0]</p>
+
+
+
+		<button class="forWard" onclick="goForward(rover)" type="button">&#9650;</button>
+		<br>
+		<button class="goLeft" onclick="goLeft(rover)" type="button">&#9668;</button>
+		<button class="goBack" onclick="goBackward(rover)" type="button">&#9660;</button>
+		<button class="goRight" onclick="goRight(rover)" type="button">&#9658;</button>
+
+
+
 
 </body>
 </html>

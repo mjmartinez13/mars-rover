@@ -1,0 +1,63 @@
+	body {
+		 width: 900px;
+		 margin: auto;
+		 padding-top: 100px;
+		 font-family: sans-serif;
+
+	}
+  * {
+		margin: 0;
+		padding: 0;
+	}
+img {
+  float: left;
+}
+h1 {
+  margin-bottom: 10px;
+}
+h3 {
+  position: relative;
+  left: 50px;
+  font-size: 30px;
+  margin-bottom: 20px;
+  float: left;
+}
+
+#rover-position {
+  position: relative;
+  left: 70px;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+/*===================================
+BUTTON
+=====================================*/
+.forWard {
+  margin-left: 124px !important;
+  margin-bottom: 10px;
+  background-color: #27ae60;
+  border: 1px solid #27ae60;
+  color: #fff;
+
+}
+.goRight,
+.goLeft {
+  background-color: #f1c40f;
+  border: 1px solid #f1c40f;
+  color: #fff;
+}
+.goBack {
+  background-color: #e74c3c;
+  border: 1px solid #e74c3c;
+  color: #fff;
+}
+.forWard,
+.goLeft,
+.goBack,
+.goRight {
+  width: 100px;
+  height: 70px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
