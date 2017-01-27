@@ -1,4 +1,26 @@
 
+
+
+
+//===============================
+//  MY ROVER
+//===============================
+
+var rover = {
+  position: [0,0],
+  direction: 'N'
+};
+
+
+//===============================
+//  ROCK
+//===============================
+
+var rock = {
+  position: [5,0],
+  direction: 'N'
+};
+
 //===============================
 //  ARROW KEY JS
 //===============================
@@ -18,28 +40,6 @@ document.onkeydown = function(evt) {
         case 40:
             goBackward(rover);
     }
-};
-
-//===============================
-//  MY ROVER
-//===============================
-
-
-var rover = {
-  position: [0,0],
-  direction: 'N'
-};
-
-//===============================
-//  ROCK
-//===============================
-
-var rock = {
-  position: [5,0],
-};
-
-var rock2 = {
-  position: [4,5],
 };
 
 
@@ -63,13 +63,11 @@ function goForward(rover) {
       break;
     }
 
-
-  roverGrid(rover);
   myRock(rover);
+  roverGrid(rover);
   document.getElementById('rover-position').innerHTML = "[" + rover.position[0] + ", " + rover.position[1] + "]";
   console.log("New Rover Position: [" + rover.position[0] + ", " + rover.position[1] + "]");
 }
-
 //===============================
 //  GO BACKWARD
 //===============================
@@ -89,6 +87,7 @@ function goBackward(rover) {
       rover.position[1]++ ;
       break;
   }
+  myRock(rover);
   roverGrid(rover);
   document.getElementById('rover-position').innerHTML = "[" + rover.position[0] + ", " + rover.position[1] + "]";
   console.log("New Rover Position: [" + rover.position[0] + ", " + rover.position[1] + "]");
@@ -114,6 +113,7 @@ function goRight(rover) {
       break;
 
     }
+  myRock(rover);
   roverGrid(rover);
   document.getElementById('rover-position').innerHTML = "[" + rover.direction + "]";
   console.log("New Rover Direction: [" + rover.direction + "]");
@@ -139,6 +139,7 @@ function goLeft(rover) {
       break;
 
     }
+  myRock(rover);
  roverGrid(rover);
   document.getElementById('rover-position').innerHTML = "[" + rover.direction + "]";
   console.log("New Rover Direction: [" + rover.direction + "]");
@@ -162,12 +163,10 @@ function goLeft(rover) {
   //===============================
   //  ROCK
   //===============================
-function myRock(rover){
-  if (rover.position >= rock.position ) {
-    rover.position[0] = 4;
-    alert("\u2666\u2666WARNING\u2666\u2666 rock ahead, change direction \u25c0\u25b6");
-  }else if (rover.position >= rock2.position) {
-    rover.position[1] = 4;
-    alert("\u2666\u2666WARNING\u2666\u2666 rock ahead, change direction \u25c0\u25b6");
+
+  function myRock(rover) {
+    if (rover.position[0] === rock.position[0]) {
+      rover.position[0]--;
+      alert("\u2666\u2666WARNING\u2666\u2666 rock ahead, change direction \u25c0\u25b6");
+    }
   }
-}
